@@ -1,0 +1,59 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+	- When I initialize a repository, I create a hidden .git folder that sets
+	up configuration details. I need to initialize in order to create this
+	folder. If I didn't initialize, git wouldn't know what folder should be
+	part of the repository I want to create.
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+
+	- The working directory contains actual local files. The repository 
+	contains committed files. The staging area lets you toy around with adding
+	local files to a package that will later be added to the repository. Without
+	a staging area, we could only commit one file at a time, unless there was
+	some other command that allowed for committing multiple files at once. In
+	any case, the staging area is nice because it allows the user to add and
+	remove files from being part of a commit before "committing" (no pun
+	intended) to actually adding them.
+	
+How can you use the staging area to make sure you have one commit per logical 
+change?
+
+	- The staging area allows for adding multiple files before a commit, so if
+	the logical change extends across multiple files, the change can be 
+	committed all at once. Likewise, if the logical change involves only some 
+	of the modified files, I can just add the relevant files to the staging area
+	rather than committing all changes in the directory or something.
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+	- Some examples were given in the video: (1) experimental features that 
+	might not work, (2) creating alternate versions of the game (e.g., easy
+	mode) while still keeping the original version unchanged. Branches help 
+	because (1) they don't mess up the master branch and therefore don't require
+	you to revert unwanted changes from it and (2) they let you keep two 
+	different versions of the files without switching back and forth between
+	commit ids.
+
+How do the diagrams help you visualize the branch structure?
+
+	The diagrams make it easy to see parent relationships, which branches are
+	present, and which commits are unreachable. Reachability is readily apparent
+	based on tracing backwards from a given branch tip.
+
+What is the result of merging two branches together? Why do we represent it in 
+the diagram the way we do?
+
+	Merging two branches combines all the commits they contained, interleaved
+	by time stamp. We draw them as merging to a single node because now there is
+	one parent for both sets of commits.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+	Benefit of automatic is saving time by not needing to review non-conflicting
+	changes. Benefit of doing merges manually might be that the person merging
+	gets a better understanding of the changes s/he didn't make herself and 
+	can anticipate conflicts without git's conflict messages, which can 
+	sometimes include more text as conflicting than they should.
