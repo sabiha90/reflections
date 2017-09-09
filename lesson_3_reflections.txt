@@ -1,26 +1,57 @@
-When would you want to use a remote repository rather than keeping all your work local?
+When would you want to use a remote repository rather than keeping all your
+work local?
 
-When I want to share my project with other people and make the code publically available for others to view and make changes
+When I want to share my project with other people and make the code publically
+available for others to view and make changes
 
-Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+Why might you want to always pull changes manually rather than having Git
+automatically stay up-to-date with your remote repository?
 
-Because I may want to make some changes before I finally commit and make it available to the public. If Git automatically updates the remote repository, then some half done work may get synced and create bugs in my code.
+Because I may want to make some changes before I finally commit and make it
+available to the public. If Git automatically updates the remote repository,
+then some half done work may get synced and create bugs in my code.
 
-Describe the differences between forks, clones, and branches. When would you use one instead of another?
+Describe the differences between forks, clones, and branches. When would you
+use one instead of another?
 
-Forks allows users to copy a repository from another account to one's own repository directly on the Github servers. 
-To make changes to the code we can clone down the forked repository into our local machines.
-If we want to add a new feature but don't want to commit it currently into the final version, then we can create a branch of the original repository to try out the new feature without affecting the code in the official version. Later we can merge the two branches into the final version.
+Forks allows users to copy a repository from another account to one's own
+repository directly on the Github servers.  To make changes to the code we can
+clone down the forked repository into our local machines. If we want to add a
+new feature but don't want to commit it currently into the final version, then
+we can create a branch of the original repository to try out the new feature
+without affecting the code in the official version. Later we can merge the two
+branches into the final version.
 
-What is the benefit of having a copy of the last known state of the remote stored locally?
+What is the benefit of having a copy of the last known state of the remote
+stored locally?
 
-If we want to pull the changes made to the remote repository before going offline to our local machine and work on those changes without affecting the local master version, then this option is feasible. Git fetch allows us to access the local copy of the remote version and later we can merge the local copy of the remote master version with the local master version.
+If we want to pull the changes made to the remote repository before going
+offline to our local machine and work on those changes without affecting the
+local master version, then this option is feasible. Git fetch allows us to
+access the local copy of the remote version and later we can merge the local
+copy of the remote master version with the local master version.
 
-How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+How would you collaborate without using Git or GitHub? What would be easier,
+and what would be harder?
 
-Without Git or github, collaboration would involve sharing files over an email or some network.The easy part will be it won't involve a series of commands and will be simpler. But it will involve a lot of conversation which will add up to confusion since it will be difficult to keep track of the files and it's versions. It wouldn't be organized and will ultimately lead to a series of errors and bugs in the code.
+Without Git or github, collaboration would involve sharing files over an email
+or some network.The easy part will be it won't involve a series of commands
+and will be simpler. But it will involve a lot of conversation which will add
+up to confusion since it will be difficult to keep track of the files and it's
+versions. It wouldn't be organized and will ultimately lead to a series of
+errors and bugs in the code.
 
-When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+When would you want to make changes in a separate branch rather than directly
+in master? What benefits does each approach have?
 
-When we want to add a new feature to our code and we want our teammates to have a look at it and provide feedback before making it final, it makes sense to create a separate branch and then create a pull request. In that case, we can incorporate any changes provided in the feedback to improve the code and then finally merge it.
-Working directlty on the master branch is less complicated than creating a separate branch because then we don't have to go through the overhead of pull, merge and resolving merge conflicts. But also, the disadvantage is if there is a bug in an update or our teammates don't want the feature to be added, then it will lead us to change the code again by reverting back to previous versions, leading to confusions and introduction of more bugs.
+When we want to add a new feature to our code and we want our teammates to
+have a look at it and provide feedback before making it final, it makes sense
+to create a separate branch and then create a pull request. In that case, we
+can incorporate any changes provided in the feedback to improve the code and
+then finally merge it. Working directlty on the master branch is less
+complicated than creating a separate branch because then we don't have to go
+through the overhead of pull, merge and resolving merge conflicts. But also,
+the disadvantage is if there is a bug in an update or our teammates don't want
+the feature to be added, then it will lead us to change the code again by
+reverting back to previous versions, leading to confusions and introduction of
+more bugs.
